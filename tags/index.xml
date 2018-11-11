@@ -2,157 +2,157 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CanYellow&#39;s Blog</title>
-    <link>//canyellow.github.io:40773/tags/</link>
+    <link>//canyellow.github.io/tags/</link>
     <description>Recent content in Tags on CanYellow&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Sun, 04 Nov 2018 19:30:40 +0800</lastBuildDate>
     
-	<atom:link href="//canyellow.github.io:40773/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//canyellow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Centos6</title>
-      <link>//canyellow.github.io:40773/tags/centos6/</link>
+      <link>//canyellow.github.io/tags/centos6/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/centos6/</guid>
+      <guid>//canyellow.github.io/tags/centos6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dns</title>
-      <link>//canyellow.github.io:40773/tags/dns/</link>
+      <link>//canyellow.github.io/tags/dns/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/dns/</guid>
+      <guid>//canyellow.github.io/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dns解析</title>
-      <link>//canyellow.github.io:40773/tags/dns%E8%A7%A3%E6%9E%90/</link>
+      <link>//canyellow.github.io/tags/dns%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/dns%E8%A7%A3%E6%9E%90/</guid>
+      <guid>//canyellow.github.io/tags/dns%E8%A7%A3%E6%9E%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Domain</title>
-      <link>//canyellow.github.io:40773/tags/domain/</link>
+      <link>//canyellow.github.io/tags/domain/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/domain/</guid>
+      <guid>//canyellow.github.io/tags/domain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>//canyellow.github.io:40773/tags/hugo/</link>
+      <link>//canyellow.github.io/tags/hugo/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/hugo/</guid>
+      <guid>//canyellow.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo Extended</title>
-      <link>//canyellow.github.io:40773/tags/hugo-extended/</link>
+      <link>//canyellow.github.io/tags/hugo-extended/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/hugo-extended/</guid>
+      <guid>//canyellow.github.io/tags/hugo-extended/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo Server</title>
-      <link>//canyellow.github.io:40773/tags/hugo-server/</link>
+      <link>//canyellow.github.io/tags/hugo-server/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/hugo-server/</guid>
+      <guid>//canyellow.github.io/tags/hugo-server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo编译配置</title>
-      <link>//canyellow.github.io:40773/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</link>
+      <link>//canyellow.github.io/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</guid>
+      <guid>//canyellow.github.io/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Static Page</title>
-      <link>//canyellow.github.io:40773/tags/static-page/</link>
+      <link>//canyellow.github.io/tags/static-page/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/static-page/</guid>
+      <guid>//canyellow.github.io/tags/static-page/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Taga</title>
-      <link>//canyellow.github.io:40773/tags/taga/</link>
+      <link>//canyellow.github.io/tags/taga/</link>
       <pubDate>Sun, 04 Nov 2018 02:22:21 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/taga/</guid>
+      <guid>//canyellow.github.io/tags/taga/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tagb</title>
-      <link>//canyellow.github.io:40773/tags/tagb/</link>
+      <link>//canyellow.github.io/tags/tagb/</link>
       <pubDate>Sun, 04 Nov 2018 02:22:21 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/tagb/</guid>
+      <guid>//canyellow.github.io/tags/tagb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vps</title>
-      <link>//canyellow.github.io:40773/tags/vps/</link>
+      <link>//canyellow.github.io/tags/vps/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/vps/</guid>
+      <guid>//canyellow.github.io/tags/vps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vultr</title>
-      <link>//canyellow.github.io:40773/tags/vultr/</link>
+      <link>//canyellow.github.io/tags/vultr/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/vultr/</guid>
+      <guid>//canyellow.github.io/tags/vultr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>域名绑定</title>
-      <link>//canyellow.github.io:40773/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</link>
+      <link>//canyellow.github.io/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</guid>
+      <guid>//canyellow.github.io/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</guid>
       <description></description>
     </item>
     
     <item>
       <title>建站</title>
-      <link>//canyellow.github.io:40773/tags/%E5%BB%BA%E7%AB%99/</link>
+      <link>//canyellow.github.io/tags/%E5%BB%BA%E7%AB%99/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/%E5%BB%BA%E7%AB%99/</guid>
+      <guid>//canyellow.github.io/tags/%E5%BB%BA%E7%AB%99/</guid>
       <description></description>
     </item>
     
     <item>
       <title>静态博客</title>
-      <link>//canyellow.github.io:40773/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <link>//canyellow.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io:40773/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>//canyellow.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
