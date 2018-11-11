@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain on CanYellow&#39;s Blog</title>
-    <link>//canyellow.eu.org:41493/tags/domain/</link>
+    <link>//canyellow.github.io:40773/tags/domain/</link>
     <description>Recent content in Domain on CanYellow&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Sun, 04 Nov 2018 19:30:40 +0800</lastBuildDate>
     
-	<atom:link href="//canyellow.eu.org:41493/tags/domain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//canyellow.github.io:40773/tags/domain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo in VPS</title>
-      <link>//canyellow.eu.org:41493/post/hugo-in-vps/</link>
+      <link>//canyellow.github.io:40773/post/hugo-in-vps/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.eu.org:41493/post/hugo-in-vps/</guid>
+      <guid>//canyellow.github.io:40773/post/hugo-in-vps/</guid>
       <description>&lt;p&gt;在Vultr上申请了了一个VPS，本来一直只用来科学上网用的，最近心血来潮打算好好利用VPS，在在上面利用Hugo搭建一个个人静态博客。本来以为比较简单的，没想到折腾了两天，特地把建立过程与踩的坑记录下来，正好贡献新博客的处女作。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
