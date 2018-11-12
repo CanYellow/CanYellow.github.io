@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go Libsass on CanYellow&#39;s Blog</title>
+    <link>//canyellow.github.io/tags/go-libsass/</link>
+    <description>Recent content in Go Libsass on CanYellow&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Mon, 12 Nov 2018 01:48:46 +0800</lastBuildDate>
+    
+	<atom:link href="//canyellow.github.io/tags/go-libsass/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golibsass Error and Gcc Install</title>
+      <link>//canyellow.github.io/post/golibsass-error-and-gcc-install/</link>
+      <pubDate>Mon, 12 Nov 2018 01:48:46 +0800</pubDate>
+      
+      <guid>//canyellow.github.io/post/golibsass-error-and-gcc-install/</guid>
+      <description>&lt;p&gt;上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示&lt;code&gt;empty declaration&lt;/code&gt;，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

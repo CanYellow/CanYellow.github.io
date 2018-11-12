@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Golibsass Error and Gcc Install</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="Can Yellow" />
+  <meta name="description" content="上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示empty declaration，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。
+
+" />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Golibsass Error and Gcc Install" />
+    <meta name="twitter:description" content="上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示empty declaration，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。
+
+" />
+    <meta name="twitter:image" content="//canyellow.github.io/images/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Golibsass Error and Gcc Install" />
+  <meta property="og:description" content="上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示empty declaration，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。
+
+" />
+  <meta property="og:url" content="//canyellow.github.io/post/golibsass-error-and-gcc-install/" />
+  <meta property="og:image" content="//canyellow.github.io/images/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.50" />
+
+
+<link rel="canonical" href="//canyellow.github.io/post/golibsass-error-and-gcc-install/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc" />
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587" />
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="CanYellow&#39;s Blog" />
+<meta name="msapplication-tooltip" content="CanYellow&#39;s Blog" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/images/tile-image-windows.png" />
+<link rel="icon" href="//canyellow.github.io/images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="//canyellow.github.io/images/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="//canyellow.github.io/images/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="//canyellow.github.io/images/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="//canyellow.github.io/images/touch-icon-apple.png" />
+<link rel="mask-icon" href="//canyellow.github.io/images/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+
+
+<link rel="stylesheet" href="//canyellow.github.io/styles/style.css">
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+        <a title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="//canyellow.github.io/images/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">CanYellow&#39;s Blog</h2>
+  
+  <p class="subtitle">Qui non est hodie cras minus aptus erit</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="//canyellow.github.io/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="//canyellow.github.io/tags/">Tags</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+      <li class="social-item">
+        <a href="mailto:hc_hc_hc@126.com" title="Email"><span class="icon icon-email"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="//canyellow.github.io/images/qrcode.jpg" title="Wechat"><span class="icon icon-wechat"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a rel="alternate" type="application/rss+xml" href="//canyellow.github.io/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Golibsass Error and Gcc Install</h1>
+      <p class="post-meta">@Can Yellow · Nov 12, 2018 · 2 min read</p>
+    </header>
+    <article class="post-content"><p>上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示<code>empty declaration</code>，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。</p>
+
+<p></p>
+
+<h2 id="原因补充说明">原因补充说明</h2>
+
+<p>关于go-libsass报错的原因，<a href="https://stackoverflow.com/questions/45349079/how-to-use-attribute-fallthrough-correctly-in-gcc/48702576#48702576">这里</a>有详细的说明可以参考。</p>
+
+<pre><code>大致就是'__attribute__ ((fallthrough))'特性是GCC7新加进去的，与老版本是不兼容的，为此，如果在小于7.0的版本的GCC上运行上面的代码，就会得到我们上面的报错，编译器会认为变量没有声明。
+解决方案就是升级GCC编译器到7.0以上。
+</code></pre>
+
+<h2 id="升级gcc编译器">升级gcc编译器</h2>
+
+<p><a href="https://gcc.gnu.org/">gcc编译器官网</a>并没有给出打包好的安装文件，因此我们只能从源代码编译生成新版gcc编译器所需的可执行文件、库文件以及头文件。幸好，gcc官网还是给出了一个编译指南的，<a href="https://gcc.gnu.org/install/configure.html">在这里</a>。除此之外，我在知乎上也找到了一份<a href="https://zhuanlan.zhihu.com/p/33026927">gcc7.2.0的编译指南</a>。以下是编译过程的记录。</p>
+
+<h3 id="准备工作-安装工具包">准备工作，安装工具包</h3>
+
+<p>这一步，我不需要做，因为我的系统上已经安装好了，只是原有的gcc版本过低而已。对于没有gcc等基础工具的人，需要执行以下命令安装一整套工具。</p>
+
+<pre><code>$ sudo yum  groupinstall Development tools
+</code></pre>
+
+<p><strong>注意：</strong> 本文中所有的代码块，起首的<code>$</code>号表示终端输入的命令，起首的<code>&gt;</code>号表示终端交互显示的内容，符号本身都不需要输入。</p>
+
+<p>如果，你无法确定你的电脑上有没有安装一整套的工具，可以在终端里面输入下面的代码：</p>
+
+<pre><code>$ gcc --version
+</code></pre>
+
+<p>如果显示类似如下的版本信息的话，说明已经安装好了。</p>
+
+<pre><code>gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</code></pre>
+
+<p>如果显示<code>command not found</code>，说明尚未安装，那就需要执行上面的安装命令了。</p>
+
+<h3 id="下载源代码">下载源代码</h3>
+
+<p>在终端里面输入下面的代码下载源代码</p>
+
+<pre><code>$ mkdir ~/src
+$ cd ~/src
+$ wget https://mirrors.ustc.edu.cn/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz
+</code></pre>
+
+<p><strong>注意：</strong>我打算将下载的压缩文件放到我新建的文件夹~/src中,~表示在我的主目录下面，这个路径不是绝对的，请自行更改，倒但是更改后，后面碰到对应的路径，请做对应的变更。</p>
+
+<h3 id="解压源代码">解压源代码</h3>
+
+<p><code>tar.xz</code>格式的文件是经过两层压缩的，所以解压缩需要分步执行。</p>
+
+<pre><code>$ xz -d gcc-7.3.0.tar.xz
+$ tar xvf gcc-7.3.0.tar
+</code></pre>
+
+<p>此时在当前目录应该能够看到解压出来的gcc-7.3.0文件夹了</p>
+
+<pre><code>$ ls ~/src
+&gt; gcc-7.3.0 gcc-7.3.0.tar.xz
+</code></pre>
+
+<h3 id="添加依赖关系">添加依赖关系</h3>
+
+<p>源码文件夹中的download_prerequisites文件指定了安装所需的依赖包，因此我们要首先运行一下该文件把需要的依赖先安装好。</p>
+
+<pre><code>$ ./contrib/download_prerequisites
+</code></pre>
+
+<p>如果提示<code>command not found</code>一类的错误，就先改权限再执行，换成下面的代码：</p>
+
+<pre><code>$ sudo chmod  755 ./contrib/download_prerequisites
+$ ./contrib/download_prerequisites
+</code></pre>
+
+<h3 id="建立内存缓存">建立内存缓存</h3>
+
+<p>由于我的VPS内存只有512MB，第一次编译过程中由于内存不足，直接报错中断了编译进程，所以第一次编译以失败告终。也就是说在编译之前先要确认内存是否够用，我的内存不足，只能堆内存页面文件了（也就是用硬盘存储空间代替内存），我没有尝试过，保守估计需要2GB内存，不过4GB保险些。</p>
+
+<p>这里网上的出错信息，当时的出错信息与之类似，由于内存不足，第四个进程直接退出了</p>
+
+<pre><code>g++: internal compiler error: Killed (program cc1plus) 
+</code></pre>
+
+<p>先确认有无内存页面文件</p>
+
+<pre><code>$ free -m
+
+</code></pre>
+
+<p>如果结果中有显示swap的值是0，说明没有内存页面缓存，我们需要新增内存页面文件，步骤如下：</p>
+
+<pre><code>$ dd if=/dev/zero of=/swapfile count=4096 bs=1M
+$ ls / | grep swapfile
+$ mkswap /swapfile
+$ sudo gedit /etc/fstab
+</code></pre>
+
+<p>在最后一行命令执行后，会使用gedit打开fstab文件，在文件里新增如下内容：</p>
+
+<pre><code>/swapfile   none    swap    sw    0   0
+</code></pre>
+
+<p>现在我们重启系统，内存页面文件就会自动加载了。</p>
+
+<p>当然，如果你的系统实际内存超过4GB，那你就不需要建立内存页面缓存了，这一步对你是多余的。</p>
+
+<h3 id="编译安装">编译安装</h3>
+
+<pre><code>$ cd ~
+$ mkdir gcc
+$ cd ~/src/gcc-7.3.0
+$ ../configure --prefix=~/gcc/ --enable-checking=release 
+--enable-languages=c,c++ --disable-multilib
+</code></pre>
+
+<p>上面的代码中，首先在刚刚的新建文件夹gcc下存放编译后的文件，所以将&ndash;prefix定义为~/gcc/。上面的最后一行代码是提供给gcc的编译选项。编译准备已经完成。</p>
+
+<p>下面是正式的编译安装了，时间较长，在我的VPS上执行了超过4个小时。</p>
+
+<pre><code>$ make j4
+$ sudo make install
+</code></pre>
+
+<h3 id="建立新版本链接">建立新版本链接</h3>
+
+<p>由于虽然已经编译完成，但是我将编译好的文件配置在<code>~/gcc</code>目录中，编译好后，目录结构如下：</p>
+
+<pre><code>$ ls ~/gcc
+&gt; bin  include  lib  lib64  libexec  share
+</code></pre>
+
+<p>现在需要将新版本的编译好的文件加入系统的环境变量 对应的路径中，保证系统能默认找到gcc新版本，gcc老版本我直接屏蔽了。
+所以先将gcc的可执行文件备份，再替换成新的文件。</p>
+
+<pre><code>$ sudo mv /usr/bin/gcc /usr/bin/gcc-4.4.7   //备份gcc
+$ sudo mv /usr/bin/gcc /usr/bin/g++-4.4.7   //备份g++
+$ sudo cp ~/gcc/bin/g++ /usr/bin/g++
+$ sudo cp ~/gcc/bin/gcc /usr/bin/gcc
+</code></pre>
+
+<p>include的头文件没有变化，所以不需要替换，但是lib64里面的库需要更新</p>
+
+<pre><code>$ sudo mv /usr/lib64/ /usr/lib64-4.4.7   //备份g++
+$ sudo ln -s ~/gcc/lib64 /usr/lib64     //建立库文件的软连接
+</code></pre>
+
+<p>因为库文件里也就libstdc++有变，此处也可以</p>
+
+<pre><code>ln -s ~/gcc/lib64/libstdc++.so.6.0.24 /usr/lib64/libstdc++.so.6.0.24
+</code></pre>
+
+<h3 id="查看版本-确认是否安装成功">查看版本，确认是否安装成功</h3>
+
+<p>与最初的命令一样，查看下gcc的当前版本，确认是不是7.3.0，输入下面的命令，如果输出gcc版本为7.3.0说明编译成功</p>
+
+<pre><code>$ gcc --version
+</code></pre></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="//canyellow.github.io/tags/go-libsass"><span class="tag">Go-Libsass</span></a></li>
+        
+          <li><a href="//canyellow.github.io/tags/gcc7.3.0"><span class="tag">Gcc7.3.0</span></a></li>
+        
+          <li><a href="//canyellow.github.io/tags/compile"><span class="tag">Compile</span></a></li>
+        
+          <li><a href="//canyellow.github.io/tags/centos"><span class="tag">CentOS</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.
+      </p>
+    </footer>
+    
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2018 CanYellow&#39;s Blog</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+<script src="//canyellow.github.io/scripts/index.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=37661&mindelay=10"></' + 'script>')</script></body>
+</html>

@@ -219,18 +219,18 @@
 
 <p></p>
 
-<h1 id="第一步-注册建立vps">第一步：注册建立VPS</h1>
+<h2 id="第一步-注册建立vps">第一步：注册建立VPS</h2>
 
 <p>因为是在已经购买的VPS上建站，这一步我不需要做。为了完整性，再整理一遍。</p>
 
-<h2 id="注册账户">注册账户</h2>
+<h3 id="注册账户">注册账户</h3>
 
 <p>到Vultr的官网注册账号，官网网址：
 <a href="https://www.vultr.com/?ref=7435456">Vultr官网</a></p>
 
 <p>截止撰写本文的时候，官网页面是附图<a href="#vultr官网">vultr官网</a>这样的，还是很简洁大气的!</p>
 
-<h2 id="购买vps">购买VPS</h2>
+<h3 id="购买vps">购买VPS</h3>
 
 <ol>
 <li>注册完毕，直接使用账号密码登录vultr，就可以购买VPS服务了。</li>
@@ -251,13 +251,13 @@
 
 <p>整个过程的图示，见附图<a href="#购买VPS">购买VPS</a></p>
 
-<h1 id="第二步-安装hugo">第二步：安装Hugo</h1>
+<h2 id="第二步-安装hugo">第二步：安装Hugo</h2>
 
-<h2 id="尝试安装预编译二进制文件-binary">尝试安装预编译二进制文件（binary）</h2>
+<h3 id="尝试安装预编译二进制文件-binary">尝试安装预编译二进制文件（binary）</h3>
 
 <p>登录Hugo官网预编译文件下载页<a href="https://github.com/gohugoio/hugo/releases">Hugo预编译安装包下载</a>，下载系统对应的预编译的二进制文件。对于Debian，ubuntu，windows，MacOS，官网都能找到现成的预编译的二进制安装包。亲测win7，ubuntu可用。</p>
 
-<h2 id="第一个大坑-官网没有centos对应的安装包">第一个大坑：官网没有CentOS对应的安装包</h2>
+<h3 id="第一个大坑-官网没有centos对应的安装包">第一个大坑：官网没有CentOS对应的安装包</h3>
 
 <p>由于我的VPS是CentOS7的，官网没有现成的预编译二进制包。抱着试试看的想法，我打算尝试使用CentOS7默认的包管理器yum安装看看是不是在线的软件仓库里有现成的Hugo包可以安装。</p>
 
@@ -318,7 +318,7 @@ $ sudo yum install -y hugo   //安装hugo
 &gt; Hugo Static Site Generator v0.50/extended linux/amd64 BuildDate: 2018-10-29T10:09:56Z
 </code></pre>
 
-<h2 id="第二个大坑-预编译版本不支持sass">第二个大坑：预编译版本不支持sass</h2>
+<h3 id="第二个大坑-预编译版本不支持sass">第二个大坑：预编译版本不支持sass</h3>
 
 <p>安装完成后，我建立博客文件夹，并使用了hugo-nuo主题，用hugo生成时报错，具体的错误信息没有存档，大概与如下内容类似：</p>
 
@@ -329,16 +329,16 @@ $ sudo yum install -y hugo   //安装hugo
 
 <p><strong>注意</strong>：之所以报错，是因为我选的主题里面用到了sass功能，必须Hugo支持。如果你的主题没有使用sass功能，安装正常的Hugo就可以了，也就是说第二步到这里就已经完成了。</p>
 
-<h2 id="尝试从源代码编译安装">尝试从源代码编译安装</h2>
+<h3 id="尝试从源代码编译安装">尝试从源代码编译安装</h3>
 
-<h3 id="安装go语言环境">安装go语言环境</h3>
+<h4 id="安装go语言环境">安装go语言环境</h4>
 
 <p>Hugo是基于go语言开发的，因此编译Hugo要先准备go语言环境，下面的命令安装go语言的环境：</p>
 
 <pre><code>$ sudo yum install -y golang
 </code></pre>
 
-<h3 id="编译hugo出错">编译Hugo出错</h3>
+<h4 id="编译hugo出错">编译Hugo出错</h4>
 
 <p>go语言环境安装OK后，就可以在此基础上编译安装Hugo了。但是<a href="https://github.com/gohugoio/hugo">Hugo项目主页</a>中的编译方法实际上会报错，里面提到的编译方法如下：</p>
 
@@ -359,7 +359,7 @@ $ go env
 
 <li><p>install命令不能自动下载并安装Hugo编译所需的依赖的各种库。所以即使源码放置的位置正确也会出错。</p>
 
-<h3 id="编译hugo的正确打开方式">编译Hugo的正确打开方式</h3>
+<h4 id="编译hugo的正确打开方式">编译Hugo的正确打开方式</h4>
 
 <p>所以基于go语言的Hugo的正确打开方式是使用get命令。因为get命令可以自动安装所需的依赖。</p>
 
@@ -373,7 +373,7 @@ $ go install --tags extended
 //--tags extended表示安装extended版，即添加sass支持，这个功能需要上面go-libsass库支持
 </code></pre>
 
-<h3 id="编译hugo后的使用">编译Hugo后的使用</h3>
+<h4 id="编译hugo后的使用">编译Hugo后的使用</h4>
 
 <p>安装预编译的Hugo，我们可以在命令行直接运行，win版可以将Hugo的执行文件放到当前目录，然后在当前目录打开命令行运行Hugo命令。但是编译运行稍有不同，编译好后我们需要简单的配置一下。
 go语言编译好的可执行文件存放在&rdquo;home/username/go/bin&rdquo;目录中，可以在这个目录使用&rdquo;./hugo&rdquo;命令在终端运行Hugo。</p>
@@ -395,7 +395,7 @@ $ hugo version  //确认是否可用
 
 <p>然后将&rdquo;alias hugo=&lsquo;home/username/go/bin/hugo&rsquo;&ldquo;写入&rdquo;./bashrc&rdquo;文件末尾，esc退出vi的编辑模式，按下:wq保存并退出。则hugo命令在命令行默认可用了。</p>
 
-<h2 id="第三个大坑-go-libsass安装出错">第三个大坑：go-libsass安装出错</h2>
+<h3 id="第三个大坑-go-libsass安装出错">第三个大坑：go-libsass安装出错</h3>
 
 <p>安装go-libsass时会提示g++:enpty declaration。这里是<a href="https://stackoverflow.com/questions/45349079/how-to-use-attribute-fallthrough-correctly-in-gcc/48702576#48702576">stackoverflow上关于go-libsass安装enpty declaration错误的解决方案</a>
 &gt;With the attribute warning: empty declaration will be returned on older GCC versions (&lt; 7.x)</p></li>
@@ -405,23 +405,23 @@ $ hugo version  //确认是否可用
 
 <p>编译安装GCC7.3.0的过程耗时且麻烦，不在这里记录，后面单独开文章[TO DO]()</p>
 
-<h1 id="第三步-配置hugo">第三步：配置Hugo</h1>
+<h2 id="第三步-配置hugo">第三步：配置Hugo</h2>
 
 <p>在完成上面Hugo的安装或者在其他系统上安装完成Hugo，具体以在命令行运行&rdquo;hugo version&rdquo;可以输出Hugo的版本信息为准，说明安装OK。</p>
 
-<h2 id="hugo-new-site-建立网站架构">hugo new site 建立网站架构</h2>
+<h3 id="hugo-new-site-建立网站架构">hugo new site 建立网站架构</h3>
 
 <pre><code>$ hugo new site filename    
 //在当前目录建立以filename命令的网站文件夹
 </code></pre>
 
-<h2 id="hugo-new-post-filename-md-建立日志文件">hugo new [post/filename.md] 建立日志文件</h2>
+<h3 id="hugo-new-post-filename-md-建立日志文件">hugo new [post/filename.md] 建立日志文件</h3>
 
 <pre><code>$ hugo new post/about.md
 //在网站的content/post文件夹里建立about.md的文件，用于博客文章的源文件
 </code></pre>
 
-<h2 id="安装主题">安装主题</h2>
+<h3 id="安装主题">安装主题</h3>
 
 <p>在当前目录是网站文件夹的情况下，cd进入themes目录。</p>
 
@@ -429,36 +429,36 @@ $ hugo version  //确认是否可用
 $ git clone https://github.com/laozhu/hugo-nuo
 </code></pre>
 
-<h2 id="hugo-server-启动服务器">Hugo server 启动服务器</h2>
+<h3 id="hugo-server-启动服务器">Hugo server 启动服务器</h3>
 
 <pre><code>go server   //默认设置生成网站，只能本机用localhost:1313访问
 </code></pre>
 
 <p>我们后面将DNS与域名关联解析完成后，就可以使用下面的命令重新生成网站了，到时候同时还要编辑网站文件夹中的congfig.toml文件，将baseURL改成我们的域名+1313端口的格式，后面再继续这个话题。</p>
 
-<h1 id="第四步-配置dns-域名-domain">第四步：配置DNS，域名（domain）</h1>
+<h2 id="第四步-配置dns-域名-domain">第四步：配置DNS，域名（domain）</h2>
 
-<h2 id="获取域名">获取域名</h2>
+<h3 id="获取域名">获取域名</h3>
 
 <p>网上免费的域名，付费的域名多得是，随便找一家域名注册商都可以搞定。我用的是eu.org的免费域名。域名质量好而且免费，不可多得。<a href="https://nic.eu.org/">EU.ORG域名注册网址在这里</a></p>
 
-<h2 id="第四个大坑-域名-domain-与dns配置之间的配合">第四个大坑：域名(domain)与DNS配置之间的配合</h2>
+<h3 id="第四个大坑-域名-domain-与dns配置之间的配合">第四个大坑：域名(domain)与DNS配置之间的配合</h3>
 
-<h3 id="配置vultr的dns解析服务">配置Vultr的DNS解析服务</h3>
+<h4 id="配置vultr的dns解析服务">配置Vultr的DNS解析服务</h4>
 
 <p>回到我们的Vultr账户，与上面部署VPS的过程类似，点击server选项，在右侧的顶栏上选择DNS点击。就会来到免费Vultr的DNS免费解析页面。点击add domain添加域名，弹出的页面里分别输入你注册的域名(domain)以及你账户中VPS信息页面里的VPS的IP地址</p>
 
 <p><img src="https://s1.ax1x.com/2018/11/05/iIKL0x.png" alt="VultrDNS" /></p>
 
-<h3 id="到域名注册商处配置域名解析指向vultr的服务器">到域名注册商处配置域名解析指向Vultr的服务器</h3>
+<h4 id="到域名注册商处配置域名解析指向vultr的服务器">到域名注册商处配置域名解析指向Vultr的服务器</h4>
 
 <p>来到你的注册商这里，将Vultr的DNS服务器添加到你域名的nameservers中，Vultr的DNS服务器地址是ns1.vultr.com与ns2.vultr.com。配置好，大致如下：</p>
 
 <p><img src="https://s1.ax1x.com/2018/11/05/iIKO76.md.png" alt="在域名注册商处添加域名对应的DNS服务器" /></p>
 
-<h1 id="完结">完结</h1>
+<h2 id="完结">完结</h2>
 
-<h2 id="效果展示">效果展示</h2>
+<h3 id="效果展示">效果展示</h3>
 
 <p>拿安装好的网页图片效果镇楼：</p>
 
@@ -584,5 +584,5 @@ if (!doNotTrack) {
 
 
 
-  <script data-no-instant>document.write('<script src="/livereload.js?port=38723&mindelay=10"></' + 'script>')</script></body>
+  <script data-no-instant>document.write('<script src="/livereload.js?port=37661&mindelay=10"></' + 'script>')</script></body>
 </html>
