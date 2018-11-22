@@ -3,159 +3,188 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//canyellow.github.io/post/golibsass-error-and-gcc-install/</loc>
+    <loc>//canyellow.eu.org/post/install-tiddlywiki/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/post/golibsass-error-and-gcc-install/</loc>
     <lastmod>2018-11-12T01:48:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/post/hugo-in-vps/</loc>
+    <loc>//canyellow.eu.org/post/hugo-in-vps/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/post/about/</loc>
+    <loc>//canyellow.eu.org/post/about/</loc>
     <lastmod>2018-11-04T02:22:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/about/</loc>
-    <lastmod>2018-11-04T02:22:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/can-yellow/</loc>
-    <lastmod>2018-11-04T02:22:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/centos/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/centos6/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/compile/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/dns/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/dns%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/domain/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/gcc7.3.0/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/go-libsass/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/hugo/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/hugo-extended/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/hugo-server/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/post/</loc>
-    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/static-page/</loc>
-    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//canyellow.github.io/tags/</loc>
+    <loc>//canyellow.eu.org/tags/about/</loc>
     <lastmod>2018-11-04T02:22:21+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/vps/</loc>
+    <loc>//canyellow.eu.org/tags/can-yellow/</loc>
+    <lastmod>2018-11-04T02:22:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/centos/</loc>
+    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/centos6/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/vultr/</loc>
+    <loc>//canyellow.eu.org/tags/compile/</loc>
+    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/dns/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
+    <loc>//canyellow.eu.org/tags/dns%E8%A7%A3%E6%9E%90/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/%E5%BB%BA%E7%AB%99/</loc>
+    <loc>//canyellow.eu.org/tags/domain/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//canyellow.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>//canyellow.eu.org/tags/gcc7.3.0/</loc>
+    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/go-libsass/</loc>
+    <lastmod>2018-11-12T01:48:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/hugo/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/hugo-extended/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/hugo-server/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/hugo%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/installation/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/node.js/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/nvm/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/post/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/static-page/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/</loc>
+    <lastmod>2018-11-04T02:22:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/tiddlywiki/</loc>
+    <lastmod>2018-11-21T01:53:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/vps/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/vultr/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/%E5%BB%BA%E7%AB%99/</loc>
+    <lastmod>2018-11-04T19:30:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//canyellow.eu.org/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2018-11-04T19:30:40+08:00</lastmod>
     <priority>0</priority>
   </url>

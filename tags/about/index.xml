@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on CanYellow&#39;s Blog</title>
-    <link>//canyellow.github.io/tags/about/</link>
+    <link>//canyellow.eu.org/tags/about/</link>
     <description>Recent content in About on CanYellow&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Sun, 04 Nov 2018 02:22:21 +0800</lastBuildDate>
     
-	<atom:link href="//canyellow.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//canyellow.eu.org/tags/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>//canyellow.github.io/post/about/</link>
+      <link>//canyellow.eu.org/post/about/</link>
       <pubDate>Sun, 04 Nov 2018 02:22:21 +0800</pubDate>
       
-      <guid>//canyellow.github.io/post/about/</guid>
+      <guid>//canyellow.eu.org/post/about/</guid>
       <description>there is nothing. please wait me to add something!</description>
     </item>
     

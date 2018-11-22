@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nvm on CanYellow&#39;s Blog</title>
+    <link>//canyellow.eu.org/tags/nvm/</link>
+    <description>Recent content in Nvm on CanYellow&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Wed, 21 Nov 2018 01:53:18 +0800</lastBuildDate>
+    
+	<atom:link href="//canyellow.eu.org/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Tiddlywiki</title>
+      <link>//canyellow.eu.org/post/install-tiddlywiki/</link>
+      <pubDate>Wed, 21 Nov 2018 01:53:18 +0800</pubDate>
+      
+      <guid>//canyellow.eu.org/post/install-tiddlywiki/</guid>
+      <description>&lt;p&gt;tiddlywiki是一个个人的wiki系统，这里就介绍我在ubuntu18上安装tiddlywiki5的经过。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

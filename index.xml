@@ -2,22 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CanYellow&#39;s Blog</title>
-    <link>//canyellow.github.io/</link>
+    <link>//canyellow.eu.org/</link>
     <description>Recent content on CanYellow&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
-    <lastBuildDate>Mon, 12 Nov 2018 01:48:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Nov 2018 01:53:18 +0800</lastBuildDate>
     
-	<atom:link href="//canyellow.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//canyellow.eu.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Install Tiddlywiki</title>
+      <link>//canyellow.eu.org/post/install-tiddlywiki/</link>
+      <pubDate>Wed, 21 Nov 2018 01:53:18 +0800</pubDate>
+      
+      <guid>//canyellow.eu.org/post/install-tiddlywiki/</guid>
+      <description>&lt;p&gt;tiddlywiki是一个个人的wiki系统，这里就介绍我在ubuntu18上安装tiddlywiki5的经过。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Golibsass Error and Gcc Install</title>
-      <link>//canyellow.github.io/post/golibsass-error-and-gcc-install/</link>
+      <link>//canyellow.eu.org/post/golibsass-error-and-gcc-install/</link>
       <pubDate>Mon, 12 Nov 2018 01:48:46 +0800</pubDate>
       
-      <guid>//canyellow.github.io/post/golibsass-error-and-gcc-install/</guid>
+      <guid>//canyellow.eu.org/post/golibsass-error-and-gcc-install/</guid>
       <description>&lt;p&gt;上次说到在我的VPS上因为gcc编译器的版本太低（gcc4.4.7），导致go-libsass安装出错，提示&lt;code&gt;empty declaration&lt;/code&gt;，需要升级gcc到7.0.0以上的版本才能正常编译gcc库。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -25,10 +34,10 @@
     
     <item>
       <title>Hugo in VPS</title>
-      <link>//canyellow.github.io/post/hugo-in-vps/</link>
+      <link>//canyellow.eu.org/post/hugo-in-vps/</link>
       <pubDate>Sun, 04 Nov 2018 19:30:40 +0800</pubDate>
       
-      <guid>//canyellow.github.io/post/hugo-in-vps/</guid>
+      <guid>//canyellow.eu.org/post/hugo-in-vps/</guid>
       <description>&lt;p&gt;在Vultr上申请了了一个VPS，本来一直只用来科学上网用的，最近心血来潮打算好好利用VPS，在在上面利用Hugo搭建一个个人静态博客。本来以为比较简单的，没想到折腾了两天，特地把建立过程与踩的坑记录下来，正好贡献新博客的处女作。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -36,10 +45,10 @@
     
     <item>
       <title>About</title>
-      <link>//canyellow.github.io/post/about/</link>
+      <link>//canyellow.eu.org/post/about/</link>
       <pubDate>Sun, 04 Nov 2018 02:22:21 +0800</pubDate>
       
-      <guid>//canyellow.github.io/post/about/</guid>
+      <guid>//canyellow.eu.org/post/about/</guid>
       <description>there is nothing. please wait me to add something!</description>
     </item>
     
