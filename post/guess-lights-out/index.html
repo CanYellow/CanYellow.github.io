@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Solve lights Out Game with Exhausting Method</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="Can Yellow" />
+  <meta name="description" content="这一次，我记录下暴力枚举法求解Lights Out游戏的程序的编写思路。具体的源程序github地址
+
+" />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Solve lights Out Game with Exhausting Method" />
+    <meta name="twitter:description" content="这一次，我记录下暴力枚举法求解Lights Out游戏的程序的编写思路。具体的源程序github地址
+
+" />
+    <meta name="twitter:image" content="//canyellow.eu.org/images/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Solve lights Out Game with Exhausting Method" />
+  <meta property="og:description" content="这一次，我记录下暴力枚举法求解Lights Out游戏的程序的编写思路。具体的源程序github地址
+
+" />
+  <meta property="og:url" content="//canyellow.eu.org/post/guess-lights-out/" />
+  <meta property="og:image" content="//canyellow.eu.org/images/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.50" />
+
+
+<link rel="canonical" href="//canyellow.eu.org/post/guess-lights-out/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc" />
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587" />
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="CanYellow&#39;s Blog" />
+<meta name="msapplication-tooltip" content="CanYellow&#39;s Blog" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/images/tile-image-windows.png" />
+<link rel="icon" href="//canyellow.eu.org/images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="//canyellow.eu.org/images/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="//canyellow.eu.org/images/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="//canyellow.eu.org/images/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="//canyellow.eu.org/images/touch-icon-apple.png" />
+<link rel="mask-icon" href="//canyellow.eu.org/images/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+
+
+<link rel="stylesheet" href="//canyellow.eu.org/styles/style.css">
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+        <a title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment"></span></a>
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="//canyellow.eu.org/images/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">CanYellow&#39;s Blog</h2>
+  
+  <p class="subtitle">Qui non est hodie cras minus aptus erit</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="//canyellow.eu.org/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="//canyellow.eu.org/tags/">Tags</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+      <li class="social-item">
+        <a href="mailto:hc_hc_hc@126.com" title="Email"><span class="icon icon-email"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="//canyellow.eu.org/images/qrcode.jpg" title="Wechat"><span class="icon icon-wechat"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a rel="alternate" type="application/rss+xml" href="//canyellow.eu.org/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Solve lights Out Game with Exhausting Method</h1>
+      <p class="post-meta">@Can Yellow · Nov 23, 2018 · 1 min read</p>
+    </header>
+    <article class="post-content"><p>这一次，我记录下暴力枚举法求解Lights Out游戏的程序的编写思路。具体的源程序<a href="https://github.com/CanYellow/LightsOut/tree/master/exhaustingSearch">github地址</a></p>
+
+<p></p>
+
+<h2 id="原理">原理</h2>
+
+<p>对于Lights out游戏，根据给定的规则，实际上如果给定第一行的点击方案，为了保证全灭的要求，第2～n行的点击方案根据这个规则实际是唯一确定的。怎么理解呢？用文字描述就是，如果第一行任意选取一种点击方案（这里记为$S_1$）,那么为了保证全局全灭，首先要保证第一行全灭。对于第一行的状态，能够影响的只有$S_1$以及接下来操作的第二行点击方案（这里记为$S_2$，后面第i行点击方案直接记为$S_i$），也就是对应于$S_1$，$S_2$实际上是唯一的。同样考虑第二行，$S_1$根据规则会对第二行的状态产生影响，同时$S_2$本身会操作第二行，两者的效果叠加，就是第二行结束的状态，与上面一样的考虑，对应于该状态的$S<em>3$也是唯一的。依此类推，可得倒数第二行的点击方案$S</em>{n-1}$，可以确定最后一行的状态，若最后一行全灭，说明上面的S组合是一组解方案，否则不是。
+最后，对于第一行的可能方案，由于n个空位，都可以是0或者1，方案数量为$2^n$。</p>
+
+<h2 id="思路">思路</h2>
+
+<p>根据上面的原理，可以归纳出下面的伪代码：</p>
+
+<ol>
+<li>猜测一个首行的点击方案$S_1$;</li>
+<li>根据点击方案确认第一行的状态$C_1$，第二行的状态$C_2$;</li>
+<li>根据第一行的状态$C_1$，计算出第二行的点击方案$S_2$;</li>
+<li>根据$S_2$更新上面的状态$C_2$;</li>
+<li>根据$S_2$更新第三行的状态$C_3$;</li>
+<li>重复上面的3，4,5步骤，直到第$n-1$行；</li>
+<li>计算第n行的点击方案$S_n$;</li>
+<li>更新第n行的状态$C_n$;</li>
+<li>判断$C_n$是否满足全灭的条件，满足则解数量+1，输出点击方案$S_1,S_2,&hellip;,S_n$;否则重新猜测点击方案$S_1$回到第1步。</li>
+</ol>
+
+<h3 id="关键点-数据抽象与存储方式">关键点：数据抽象与存储方式</h3>
+
+<p>由于每个位置的状态只有亮灭（1,0）两种可能，同时每个位置的操作也只有按与不按（1,0）两种可能，因此不论是解决方案还是状态空间每个位置都只需要一个二进制位即可。C语言中有uint64_t类型（unsigned long long int类型），在我的linux系统上uint64_t占用8个字节，即64（8×8）个二进制位。为此使用一个uint64_t类型代表一组方案或者一组状态。最大可以解决63列以内的问题（64时数据已经超了）。这里我的程序没有比较行数、列数的大小，实际上将行数列数中的较小者作为列，另外的作为行，虽然仍限制列数不能超过63列，但这样行数是可以大于63的，因为行数不受uint64_t类型的容量限制。</p>
+
+<pre><code>//解方案的存储方式，动态数组
+unsigned long long int *solution=calloc(dimensionN,sizeof(unsigned long long int));
+</code></pre>
+
+<h3 id="关键点-遍历初始方案-s-1-的所有可能解的方法">关键点：遍历初始方案$S_1$的所有可能解的方法</h3>
+
+<p>显然$S_1$的所有可能方案实际上是一棵二叉树的所有路径的集合，不过所学有限，我认真考虑过还是不能设计一个程序将所有的方案一一遍历。所以智能想其他方法。我们刚刚提到可以用uint64_t类型表示解决方案。更进一步的，实际上把$S$看成一个整数的话，$S_1$的所有取值是连续的从$0$到$2^n-1$.基于这一点，实际上穷举$S_1$的所有方案，就是对代表$S_1$的整数值从0遍历到$2^n-1$。</p>
+
+<pre><code>//即0xffffffffffffffff
+unsigned long long int soluMax=pow(2.0,dimensionM)-1;
+
+//soluIndex作为循环计数，同时是$S_1$的二进制表示
+for(unsigned long long int soluIndex=0x0;soluIndex&lt;=soluMax;soluIndex++)
+{
+    solution[0]=soluIndex;
+    ...
+}
+</code></pre>
+
+<h3 id="关键点-方案s与c之间关系的表示-位操作">关键点：方案S与C之间关系的表示——位操作</h3>
+
+<p>这里的位操作按照伪代码的描述涉及下面几个内容：</p>
+
+<ol>
+<li>根据上一行的状态$C_{i-1}$，确定当前行的点击方案$S_i$;</li>
+<li>根据当前行的点击方案$S_i$，当前行的初始状态$C_i$($C_i$的初始值是由上一行得到的，见下)，更新本行点击后的$C_i$；</li>
+<li>根据本行的点击方案$S<em>i$，确定下一行的初始状态$C</em>{i+1}$；</li>
+
+<li><p>uint64_t类型高位空位的解决方案。</p>
+
+<h4 id="uint64-t类型高位空位的解决方案">uint64_t类型高位空位的解决方案</h4>
+
+<p>由于实际问题是从2-63位都有可能的(1的时候，程序初值有问题，不可用)，而uint64_t是固定64位的，超过的高位都是闲置的，在计算过程中高位的值如果不处理会导致结果错误（后面会提到原因）。所以，对于每次给定的位数m，必须屏蔽（m,64]的所有高位。程序中是用与操作实现的.
+令select=2^m-1,二进制下（m,64]位都是0,[0,m]位都是1，将之作为选择标记。
+则target=target&amp;select操作后，(m,64]位select为0，不论target原先为何值，这些位均置零了；[0,m]位select为1，target的这一部分与操作后会维持原样。这样就实现了屏蔽的功能，下面截取的代码中&amp;就是起到屏蔽作用的。</p>
+
+<pre><code>statusLast=((solution[0]&lt;&lt;1)&amp;soluMax)^solution[0]^(solution[0]&gt;&gt;1);
+...
+solution[NIndex]=(~statusLast)&amp;soluMax;
+...
+statusNow=((solution[NIndex]&lt;&lt;1)&amp;soluMax)^solution[NIndex]^(solution[NIndex]&gt;&gt;1)^statusNow;
+</code></pre>
+
+<h4 id="c-i-1-rarr-s-i">$C_{i-1}$&rarr;$S_i$</h4>
+
+<p>我们暴力求解每一步的目标是当前行i的点击必须使第i-1行全灭。即第i-1行未灭的灯，必须由点击第i对应的位置，才能灭掉。也就是
+$S<em>i$就是对$C</em>{i-1}取反得到的。</p>
+
+<pre><code>solution[NIndex]=(~statusLast)&amp;soluMax;
+</code></pre>
+
+<h4 id="s-i-rarr-c-i">$S_i$&rarr;$C_i$</h4>
+
+<p>因为点击第j个位置，j-1，j+1位置的灯会一起变化，只考虑j-1，其实就是对点击方案$S$做左移一位的结果，同理j+1的变化就是对方案$S$做右移一位的结果。不过对于j-1，由于高位存在的问题，左移时会将高位的默认0值发生变化，为了避免这个问题，左移后，必须人为的屏蔽高位一次，这样操作后最终$S_i$的作用效果就是三者的叠加（二进制加法也就是异或操作）。最终的状态则是把$S_i$的结果对初始$C_i$叠加一次。代码如下：</p>
+
+<pre><code>statusNow=((solution[NIndex]&lt;&lt;1)&amp;soluMax)^solution[NIndex]^(solution[NIndex]&gt;&gt;1)^statusNow;
+</code></pre>
+
+<h4 id="s-i-rarr-c-i-1">$S<em>i$&rarr;$C</em>{i+1}$；</h4>
+
+<p>不需要想太多，$S_i$点击后，根据规则，下一行对应位置灯的状态发生变化，两者是一致的。</p>
+
+<pre><code>statusNext=solution[NIndex];
+</code></pre></li>
+</ol></article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="//canyellow.eu.org/tags/lights-out"><span class="tag">Lights Out</span></a></li>
+        
+          <li><a href="//canyellow.eu.org/tags/flip-game"><span class="tag">Flip Game</span></a></li>
+        
+          <li><a href="//canyellow.eu.org/tags/%E7%82%B9%E7%81%AF%E6%B8%B8%E6%88%8F"><span class="tag">点灯游戏</span></a></li>
+        
+          <li><a href="//canyellow.eu.org/tags/%E6%9A%B4%E5%8A%9B%E7%A9%B7%E4%B8%BE"><span class="tag">暴力穷举</span></a></li>
+        
+          <li><a href="//canyellow.eu.org/tags/c%E8%AF%AD%E8%A8%80"><span class="tag">C语言</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.
+      </p>
+    </footer>
+    
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "disqus_shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2018 CanYellow&#39;s Blog</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+
+<script src="//canyellow.eu.org/scripts/index.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=42175&mindelay=10"></' + 'script>')</script></body>
+</html>

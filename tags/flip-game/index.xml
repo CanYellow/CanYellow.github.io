@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flip Game on CanYellow&#39;s Blog</title>
+    <link>//canyellow.eu.org/tags/flip-game/</link>
+    <description>Recent content in Flip Game on CanYellow&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
+    <lastBuildDate>Fri, 23 Nov 2018 01:45:31 +0800</lastBuildDate>
+    
+	<atom:link href="//canyellow.eu.org/tags/flip-game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Solve lights Out Game with Exhausting Method</title>
+      <link>//canyellow.eu.org/post/guess-lights-out/</link>
+      <pubDate>Fri, 23 Nov 2018 01:45:31 +0800</pubDate>
+      
+      <guid>//canyellow.eu.org/post/guess-lights-out/</guid>
+      <description>&lt;p&gt;这一次，我记录下暴力枚举法求解Lights Out游戏的程序的编写思路。具体的源程序&lt;a href=&#34;https://github.com/CanYellow/LightsOut/tree/master/exhaustingSearch&#34;&gt;github地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
